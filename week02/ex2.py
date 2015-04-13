@@ -9,6 +9,7 @@ import ex1 as est #Import the function from part 1
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 fileID = open('velocities.txt','r')
 
 data_arr = np.loadtxt(fileID) # This is the data array it is an array of 1x2 arrays
@@ -32,6 +33,7 @@ for i in range(1,len(time)+1): # Filling in the distance list
 print "Simpson's Rule estimates the distance to be: ", round(distanceSimpson,6) , " meters."
 print "The Trapezoidal rule estimates the distance to be: ", round(distanceTrap,6), " meters."
 
+
 #Plotting the two subplots and making them pretty
 f = plt.subplot(2,1,1)
 g = plt.subplot(2,1,2)
@@ -47,6 +49,5 @@ plt.ylabel('                                                         Distance [m
 g.grid()
 f.grid()
 plt.show()
-
 
 fileID.close()
